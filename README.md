@@ -122,6 +122,36 @@ npx playwright test tests/api-tests/user.api.spec.ts
 npx playwright test --ui
 ```
 
+## CI/CD & Test Reports
+
+### GitHub Actions
+This project uses GitHub Actions to automatically run tests on every push and pull request to the `main` or `master` branches.
+
+### Viewing Test Reports
+After tests run in CI/CD, HTML reports are automatically published to GitHub Pages:
+
+**Report URL Format:**
+```
+https://ripun008.github.io/playwright-automation/reports/<run-number>/
+```
+
+**Finding the run number:**
+1. Go to the **Actions** tab in your GitHub repository
+2. Click on a workflow run
+3. The run number is displayed in the URL and workflow title (e.g., "Playwright Tests #42")
+
+**Example:**
+- Run #1: `https://ripun008.github.io/playwright-automation/reports/1/`
+- Run #42: `https://ripun008.github.io/playwright-automation/reports/42/`
+
+**Note:** Reports are kept from all previous runs, so you can compare results over time.
+
+### Accessing Reports Locally
+After running tests locally, you can view the HTML report:
+```bash
+npx playwright show-report
+```
+
 ## Best Practices Implemented
 
 ### 1. **Separation of Concerns**
