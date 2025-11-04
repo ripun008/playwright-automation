@@ -180,16 +180,6 @@ npx playwright show-report
 - Clear test structure
 - Self-documenting code
 
-## Migration from Old Structure
-
-Your original tests from `example.spec.ts` have been refactored into:
-
-| Original Test | New Location | Pattern Used |
-|--------------|--------------|--------------|
-| UI Tests (has title, get started link) | `ui/home.spec.ts` | Page Objects |
-| Products API Tests | `api-tests/products.api.spec.ts` | API Objects |
-| User API Tests | `api-tests/user.api.spec.ts` | API Objects |
-
 ## Adding New Tests
 
 ### Adding a new Page Object:
